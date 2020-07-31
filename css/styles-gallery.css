@@ -173,7 +173,7 @@ label #cancel {
 	align-items: center;
 	justify-content: center;
     text-decoration: none;
-    margin-left: 10px;
+    margin-left: 0px;
 }
 .image-gallery a img{
 	/* color: rgba(255,255,255, .6);
