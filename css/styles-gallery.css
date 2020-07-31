@@ -1,0 +1,332 @@
+*,
+*::before,
+*::after{
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+html {
+	font-family: 'Roboto', sans-serif;
+	font-size: 10px;
+}
+body {
+        background-color: aliceblue;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+}
+.wrap {
+	display: block;
+ 	margin-left: auto;
+  	margin-right: auto;
+}
+nav {
+	background: #0082e6;
+	height: 80px;
+	width: 100%;
+}
+label.logo {
+	color: white;
+	font-size: 35px;
+	line-height: 80px;
+	padding: 0;
+	font-weight: 700;
+    margin: 40px;
+}
+nav ul {
+	float: left;
+	margin-right: 20px;
+}
+nav ul li {
+	display: inline-block;
+	line-height: 80px;
+	margin: 0 5px;
+}
+nav ul li a {
+	color: #fff;
+	font-size: 17px;
+	padding: 7px 13px;
+	border-radius: 3px;
+	text-transform: uppercase;
+}
+a.active, a:hover {
+	background: #1b9bff;
+	transition: .5s;
+}
+
+.sidebar{
+	position: fixed;
+	left:-240px;
+	width: 240px;
+	height: 100%;
+	background: #0082e6;
+	transition: all .5s ease;
+}
+.sidebar a {
+	display: block;
+	color: white;
+	height: 65px;
+	line-height: 65px;
+	padding-left: 30px;
+	border-bottom: 1px solid rgba(255,255,255,.1);
+	border-top: 1px solid #000;
+	border-left: 5px solid transparent;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+	transition: all .5s ease;
+}
+a:hover, a.active {
+	border-left: 5px solid #FF5C00;
+	color: #FF5C00;
+}
+.sidebar a i{
+	font-size: 23px;
+	margin-right: 16px;
+}
+.sidebar a span {
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+
+#check {
+	display: none;
+}
+#btn {
+	display: none;
+}
+#cancel {
+	display: none;
+}
+/* label #btn, label #cancel {
+	position: absolute;
+	cursor: pointer;
+	background: #262626;
+	height: 45px;
+	width: 45px;
+	text-align: center;
+	line-height: 45px;
+	color: white;
+	font-size: 29px;
+	border-radius: 5px;
+	margin: 15px 30px;
+	border: 1px solid #262626;
+	transition: all .5s ease;
+}
+label #cancel {
+	opacity: 0;
+	visibility: hidden;
+} */
+#check:checked ~ label #btn {
+	margin-left: 245px;
+	opacity: 0;
+	visibility: hidden;
+}
+#check:checked ~ label #cancel {
+	margin-left: 245px;
+	opacity: 1;
+	visibility: visible;
+}
+#check:checked ~ .sidebar {
+	left:0px;
+}
+
+/* .checkbtn {
+	display: none;
+	font-size: 30px;
+	color: #fff;
+	float: left;
+	line-height: 80px;
+	margin-left: 40px;
+	cursor: pointer;	
+} */
+
+.container {
+	width: 100%;
+    max-width: 120rem;
+	margin-top: 50px;
+	/* margin: auto;
+	padding: 0 1.5rem; */
+}
+.image-gallery {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto;
+	grid-gap: 1.5rem;
+	grid-template-areas: 
+				'img-1 img-2 img-3 img-3' 
+				'img-1 img-4 img-5 img-6'
+                'img-7 img-7 img-8 img-6'
+                'img-9 img-9 img-10 img-10';
+}
+.image-gallery a {
+	width: 100%;
+	height: 25rem;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.image-gallery a img{
+	/* color: rgba(255,255,255, .6);
+	font-size: 3rem;
+	position: relative; */
+	/* z-index: 100; */
+	padding: 1rem 3rem;
+	border: 2px solid rgba(255,255,255, .6);
+	border-radius: .4rem;
+	opacity: 0;
+	transition: opacity .5s;
+}
+.image-gallery a::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0, .8);
+	opacity: 0;
+	transition: opacity .5s;
+}
+.image-gallery a:hover img,
+.image-gallery a:hover::before{
+	opacity: 1;
+}
+.img-1 {
+	grid-area: img-1;
+	min-height: 51.5rem;
+	background-image: url("../images/gallery/img-1.jpg");
+}
+
+.img-2 {
+	grid-area: img-2;
+	background-image: url("../images/gallery/img-2.jpg");
+}
+.img-3 {
+	grid-area: img-3;
+	background-image: url("../images/gallery/img-3.jpg");
+}
+.img-4 {
+	grid-area: img-4;
+	background-image: url("../images/gallery/img-4.jpg");
+}
+.img-5 {
+	grid-area: img-5;
+	background-image: url("../images/gallery/img-5.jpg");
+}
+.img-6 {
+	grid-area: img-6;
+	min-height: 51.5rem;
+	background-image: url("../images/gallery/img-6.jpg");
+}
+.img-7 {
+	grid-area: img-7;
+	background-image: url("../images/gallery/img-7.jpg");
+}
+.img-8 {
+	grid-area: img-8;
+	background-image: url("../images/gallery/img-8.jpg");
+}
+.img-9 {
+	grid-area: img-9;
+	background-image: url("../images/gallery/img-9.jpg");
+}
+.img-10 {
+	grid-area: img-10;
+	background-image: url("../images/gallery/img-10.jpg");
+}
+
+
+@media (max-width: 952px) {
+	h3, h2 {
+		padding: 2px;
+	}
+
+	label.logo {
+		font-size: 30px;
+		padding-left: 30px;
+	}
+	nav ul li {
+		display: none;
+	}
+
+	.sidebar {
+		height: auto;
+		width: 70px;
+		left: 0;
+        margin: 50px 0;
+        z-index: 101;
+	}
+	header, #btn, #cancel {
+		display: none;
+	}
+	span {
+		position: absolute;
+		margin-left: 23px;
+		opacity: 0;
+		visibility: hidden;
+	}
+	.sidebar a i {
+		margin-left: -10px;
+	}
+	a:hover {
+		width: 180px;
+		background: inherit;
+	}
+	.sidebar a:hover span {
+		opacity: 1;
+		visibility: visible;
+    }
+    
+    @media (max-width: 900px) {
+        .image-gallery {
+        grid-template-areas: 
+            'img-1 img-1 img-2 img-2' 
+            'img-1 img-1 img-3 img-3'
+            'img-4 img-4 img-5 img-5'
+            'img-6 img-7 img-7 img-7'
+            'img-8 img-8 img-8 img-8'
+            'img-9 img-9 img-10 img-10'
+            'img-9 img-9 img-10 img-10';
+        }
+        .image-gallery a {
+            height: 20rem;
+        }
+        .img-1 {
+            min-height: 41.5rem;
+        }
+        .img-6 {
+            min-height: 20rem;
+        }
+    }
+    @media (max-width: 600px) {
+        .image-gallery {
+            grid-template-areas: 
+                'img-1 img-1 img-1 img-1' 
+                'img-2 img-2 img-2 img-2'
+                'img-3 img-3 img-3 img-3'
+                'img-4 img-4 img-4 img-4'
+                'img-5 img-5 img-5 img-5'
+                'img-6 img-6 img-6 img-6'
+                'img-7 img-7 img-7 img-7'
+                'img-8 img-8 img-8 img-8'
+                'img-9 img-9 img-9 img-9'
+                'img-10 img-10 img-10 img-10';
+            }
+            .image-gallery a,
+            .img-1,
+            .img-6 {
+                min-height: 30rem;
+                height: 30rem;
+            }
+    }
+    
