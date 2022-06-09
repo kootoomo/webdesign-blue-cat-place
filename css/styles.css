@@ -35,6 +35,12 @@ label.logo {
 	font-weight: 700;
     margin: 40px;
 }
+label.logo a{
+	color: #090c59;
+}
+label.logo a:hover{
+	color: #FF5C00;
+}
 nav ul {
 	float: left;
 	margin-right: 20px;
@@ -52,7 +58,7 @@ nav ul li a {
 	text-transform: uppercase;
 }
 a.active, a:hover {
-	background: #1b9bff;
+	background: #1b9bff;	
 	transition: .5s;
 }
 
@@ -69,7 +75,7 @@ a.active, a:hover {
 	color: white;
 	height: 65px;
 	line-height: 65px;
-	padding-left: 30px;
+	padding-left: 20px;
 	border-bottom: 1px solid rgba(255,255,255,.1);
 	border-top: 1px solid #000;
 	border-left: 5px solid transparent;
@@ -153,13 +159,16 @@ label #cancel {
 .bg-cat {
     margin-top: -30px;
     align-items: center;
+	padding-left: 50px;
 }
 .bg-cat img {
     grid-area: content;
-    width: 200%;
+    width: 140%;
     max-width: 900px;
 }
-
+.bg-cat-300 img{
+	display: none;
+}
 .bird {
     padding: 0 40px;
     margin-top: 180px;
@@ -180,55 +189,13 @@ label #cancel {
 	width: 110%;
 	opacity: 0.4;
 }
+.footer {
+	background: #0082e6;
+	color: white;
+	padding: 20px;
+	overflow: hidden;
+	text-align: center;
 
-@media (max-width: 1440px) {
-.bird {
-	width: 120%;
-    padding: 0 40px;
-	margin-top: 150px;
-	}
-.aquarelle {
-	margin-top: -5px;
-	margin-left: -300px;
-	width: 200%;
-	}
-}
-@media (max-width: 1170px) {
-	.bird {
-		width: 120%;
-		margin-top: 140px;
-	}
-	.bg-cat {
-		margin-top: -30px;
-		margin-left: -20px;
-		align-items: center;
-	}
-	.bg-cat img {
-		width: 150%;
-		max-width: 900px;
-	}
-	.aquarelle {
-		margin-top: 1px;
-		margin-left: -270px;
-		width: 200%;
-	}
-}
-@media (max-width: 1070px) {
-	.bird {
-		width: 120%;
-		margin-top: 100px;
-		position: relative;
-		animation-name: fly;
-		animation-duration: 4s;
-		transition: all .5s ease-in-out;
-	}
-	@keyframes fly {
-		0%   {left:0px; top:0px;}
-		25%  {left:100px; top:50px;}
-		50%  {left:150px; top:50px;}
-		75%  {left:300px; top:10px;}
-		100% {left:500px; top:-100px;}
-	  }
 }
 @media (max-width: 1000px) {
 	.bird img {
@@ -263,31 +230,25 @@ label #cancel {
 	.bird {
 		display: none;
 	}
+	.aquarelle {
+		display: none;
+	}
 	.grid {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 20px;
 		padding: 0 40px;
-		grid-template-areas: "content aquarelle";
+		grid-template-areas: "content content";
 	}
-	.bg-cat {
+	.bg-cat-300 {
 		margin-top: -30px;
-		margin-left: 55px;
+		margin-left: 60px;
 		align-items: center;
 	}
-	.bg-cat img {
+	.bg-cat-300 img {
 		grid-area: content;
-		width: 130%;
+		width: 100%;
 		max-width: 900px;
-	}
-	.aquarelle {
-		margin-top: 1px;
-		margin-left: -250px;
-	}
-	.aquarelle img {
-		grid-area: aquarelle;
-		width: 70%;
-		opacity: 0.3;
 	}
 
 	label.logo {
@@ -329,77 +290,26 @@ label #cancel {
 		opacity: 1;
 		visibility: visible;
 	}
-}
-@media (max-width: 700px) {
-	.bg-cat img {
-		width: 150%;
-		margin-top: 20px;
-		margin-left: 20px;
-	}
-	.aquarelle {
-		margin-top: 1px;
-		margin-left: -200px;
-		width: 220%;
+	.footer {
+		margin-top:3rem;
 	}
 }
-@media (max-width: 650px) {
-	.bg-cat img {
-		width: 180%;
-		margin-top: 10px;
-		margin-left: 20px;
-	}
-@media (max-width: 600px) {
-	.bg-cat img {
-		width: 210%;
-		margin-top: 5px;
-		margin-left: 20px;
-	}
 
-	.aquarelle {
-		margin-top: 1px;
-		margin-left: -150px;
-		width: 250%;
+@media (max-width: 620px) {
+	.sidebar a {
+    height: 45px;
+    line-height: 40px;
+    padding-left: 22px;
 	}
 }
-@media (max-width: 540px) {
-	.bg-cat img {
-		width: 250%;
-		margin-top: 5px;
-		margin-left: 50px;
-	}
-	.aquarelle {
-		margin-top: 10px;
-		margin-left: -150px;
-		width: 300%;
+@media (max-width: 500px) { 
+	.footer {
+		margin-top: 2rem;
 	}
 }
-@media (max-width: 450px) {
+@media (max-width: 420px) { 
 	.bg-cat img {
-		width: 300%;
-		margin-top: 20px;
-		margin-left: 20px;
-	}
-	.aquarelle {
-		display: none;
-	}
-}
-@media (max-width: 400px) {
-	.bg-cat img {
-		width: 350%;
-		margin-top: 20px;
-		margin-left: 1px;
-	}
-	.aquarelle {
-		display: none;
-	}
-}
-@media (max-width: 320px) {
-	.bg-cat img {
-		width: 400%;
-		margin-top: 70px;
-		margin-left: 10px;
-	}
-	.aquarelle {
-		display: none;
-	}
+		margin-top:2rem;
+		width: 200%;
+	}	
 }

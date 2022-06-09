@@ -35,6 +35,12 @@ label.logo {
 	font-weight: 700;
     margin: 40px;
 }
+label.logo a{
+	color: #090c59;
+}
+label.logo a:hover{
+	color: #FF5C00;
+}
 nav ul {
 	float: left;
 	margin-right: 20px;
@@ -69,7 +75,7 @@ a.active, a:hover {
 	color: white;
 	height: 65px;
 	line-height: 65px;
-	padding-left: 30px;
+	padding-left: 20px;
 	border-bottom: 1px solid rgba(255,255,255,.1);
 	border-top: 1px solid #000;
 	border-left: 5px solid transparent;
@@ -153,7 +159,7 @@ label #cancel {
 
 .bg-cat img {
 	grid-area: content;
-	width: 100%;
+	width: 70%;
 	max-width: 900px;
 	margin-top: 0px;
 	margin-left: 0px;
@@ -166,7 +172,8 @@ label #cancel {
 	padding: 15px;
 	margin-top: 30px;
 	margin-left: 10px;
-	font-size: 1.4rem;
+	font-size: 1rem;
+	line-height:0.5;
 }
 
 h3 {
@@ -186,80 +193,18 @@ h2:first-child {
 	display: none;
 }
 
-@media (max-width: 2500px) {
-	.bg-cat img {
-		width: 50%;
-		margin-top: -20px;
-		margin-left: 500px;
-	}
+.footer {
+	background: #0082e6;
+	color: white;
+	padding: 20px;
+	overflow: hidden;
+	text-align: center;
 }
 
-@media (max-width: 1500px) {
-	.bg-cat img {
-		width: 90%;
-		margin-top: 0px;
-		margin-left: 20px;
-	}
-	.about {
-		margin-top: 60px;
-	}
-}
-
-@media (max-width: 1440px) {
-	.bg-cat img {
-		width: 90%;
-		margin-top: 0px;
-		margin-left: 0px;
-	}
-	.about {
-		font-size: 1.2rem;
-	}
-}
-@media (max-width: 1300px) {
-	.bg-cat img {
-		width: 100%;
-		margin-top: 0px;
-	}
-	.about {
-		font-size: 1.1rem;
-}
-
-@media (max-width: 1220px) {
-	.bg-cat img {
-		margin-top: -10px;
-	}
-	.about {
-		font-size: 1.3rem;
-		margin-top: 50px;
-	}
-	h3, h2 {
-		padding: 5px;
-	}
-}
-@media (max-width: 1070px) {
-	.bg-cat img {
-		margin-top: -10px;
-		width: 110%;
-		padding-right: 50px;
-		}
-	.about {
-		font-size: 1.1rem;
-		margin-top: 40px;
-	}
-}
-@media (max-width: 1000px) {
-	h3, h2 {
-		padding: 3px;
-	}
-	.bg-cat img {
-		width: 120%;
-		margin-top: -10px;
-		padding-right: 100px;
-	}
-}
 @media (max-width: 952px) {
 	h3, h2 {
 		padding: 2px;
+		line-height:1;
 	}
 
 	label.logo {
@@ -297,11 +242,14 @@ h2:first-child {
 		visibility: visible;
 	}
 	.bg-cat img {
-		margin-left:-40px;
+		margin-left:40px;
 		}
 	.about {
 		font-size: 1.1rem;
 		margin-left:-50px;
+	}
+	.footer {
+		margin-top:4rem;
 	}
 }
 @media (max-width: 880px) {
@@ -331,6 +279,9 @@ h2:first-child {
 	.bgabout{
 		width: 90%;
 	}
+	.footer {
+		margin-top:7rem;
+	}
 }
 @media (max-width: 760px) {
 	h3, h2 {
@@ -350,8 +301,7 @@ h2:first-child {
 @media (max-width: 700px) {
 	.bg-cat img{
 		margin-top: 30px;
-		margin-left: -60px;
-		width: 150%;
+		margin-left: 10px;
 	}
 	.about {
 		margin-top: 50px;
@@ -363,24 +313,30 @@ h2:first-child {
 		padding: 2px;
 		font-size: 0.9rem;
 	}
+	.footer {
+		margin-top:9rem;
+	}
 }
-
+@media (max-width: 620px) {
+	.sidebar a {
+    height: 45px;
+    line-height: 40px;
+    padding-left: 22px;
+	}
+}
 @media (max-width: 600px) {
 	.grid {
 		display: block;
 	}
 	.bg-cat img {
-		display: none;
-	}
-	.bg-cat-default img {
-		display: flex;
 		margin-top: 20px;
-		margin-left: -10px;
-		width: 80%;
+		margin-left: 10px;
+		margin-bottom:20px;
+		width: 50%;
 	}
 	.about {
 		margin-top: 0px;
-		margin-left: 80px;
+		margin-left: 30px;
 		padding: 15px;
 	}
 	.bgabout{
@@ -390,6 +346,10 @@ h2:first-child {
 	}
 	h3, h2 {
 		font-size: 1rem;
+		padding-bottom: 0.5rem;
+	}
+	.footer {
+		margin-top:-2rem;
 	}
 }
 @media (max-width: 500px) {
@@ -399,9 +359,6 @@ h2:first-child {
 	.bgabout{
 		width: 90%;
 	}
-	.bg-cat-default img {
-		margin-left: 30px;
-	}
 }
 @media (max-width: 414px) {
 	h3, h2 {
@@ -412,21 +369,10 @@ h2:first-child {
 		padding: 0;
 		width: 90%;
 	}
-	.bg-cat-default img {
-		margin-left: 50px;
+	.footer {
+		margin-top:1rem;
 	}
-}
-@media (max-width: 414px) {
-	h3, h2 {
-		font-size: .7rem;
-	}
-	.bgabout{
-		margin-top: -5px;
-		padding: 0;
-		width: 100%;
-	}
-	.bg-cat-default img {
-		margin-top: 30px;
-		margin-left: 50px;
-	}
+	.bg-cat img {
+    margin-left: 35px;
+    width: 60%;
 }
