@@ -253,10 +253,13 @@ label #cancel {
 	background: #0082e6;
 	color: white;
 	padding: 20px;
-	overflow: hidden;
 	margin-top:1rem;
 	text-align: center;
 	font-size: 1.5rem;
+	bottom: 0;
+	width: 100%;
+	background: rgb(0,130,230);
+	background: radial-gradient(circle, rgba(0,130,230,1) 0%, rgba(98,178,240,1) 26%, rgba(240,248,255,1) 71%);
 }
 
 @media (max-width: 952px) {
