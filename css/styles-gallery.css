@@ -59,8 +59,9 @@ nav ul li a {
 	text-transform: uppercase;
 }
 a.active, a:hover {
-	background: #1b9bff;
+	/* background: #1b9bff; */
 	transition: .5s;
+	opacity: 0.9
 }
 
 .sidebar{
@@ -294,10 +295,10 @@ label #cancel {
 	.sidebar a i {
 		margin-left: -10px;
 	}
-	a:hover {
+	/* a:hover {
 		width: 180px;
 		background: inherit;
-	}
+	} */
 	.sidebar a:hover span {
 		opacity: 1;
 		visibility: visible;
@@ -345,7 +346,7 @@ label #cancel {
                 height: 30rem;
             }
     }
-    
+}
 @media (max-width: 620px) {
 	.sidebar a {
     height: 5.2rem;
